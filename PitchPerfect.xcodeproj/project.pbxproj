@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FE3BAE1A1E096D0F00B22364 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3BAE191E096D0F00B22364 /* PlaySoundsViewController.swift */; };
+		FE3BAE2D1E09891200B22364 /* BasicOperationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3BAE1D1E0987CF00B22364 /* BasicOperationTest.swift */; };
 		FE834C1D1E0172CD00995177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE834C1C1E0172CD00995177 /* AppDelegate.swift */; };
 		FE834C1F1E0172CD00995177 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE834C1E1E0172CD00995177 /* RecordSoundsViewController.swift */; };
 		FE834C221E0172CD00995177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE834C201E0172CD00995177 /* Main.storyboard */; };
@@ -15,8 +16,21 @@
 		FE834C271E0172CD00995177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE834C251E0172CD00995177 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FE3BAE281E0988D900B22364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE834C111E0172CD00995177 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE834C181E0172CD00995177;
+			remoteInfo = PitchPerfect;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		FE3BAE191E096D0F00B22364 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		FE3BAE1D1E0987CF00B22364 /* BasicOperationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicOperationTest.swift; path = ../BasicOperationTest.swift; sourceTree = "<group>"; };
+		FE3BAE231E0988D900B22364 /* PitchPerfectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchPerfectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3BAE271E0988D900B22364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE834C191E0172CD00995177 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE834C1C1E0172CD00995177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE834C1E1E0172CD00995177 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FE3BAE201E0988D900B22364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE834C161E0172CD00995177 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +58,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE3BAE241E0988D900B22364 /* PitchPerfectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE3BAE1D1E0987CF00B22364 /* BasicOperationTest.swift */,
+				FE3BAE271E0988D900B22364 /* Info.plist */,
+			);
+			path = PitchPerfectUITests;
+			sourceTree = "<group>";
+		};
 		FE834C101E0172CD00995177 = {
 			isa = PBXGroup;
 			children = (
 				FE834C1B1E0172CD00995177 /* PitchPerfect */,
+				FE3BAE241E0988D900B22364 /* PitchPerfectUITests */,
 				FE834C1A1E0172CD00995177 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FE834C191E0172CD00995177 /* PitchPerfect.app */,
+				FE3BAE231E0988D900B22364 /* PitchPerfectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +102,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FE3BAE221E0988D900B22364 /* PitchPerfectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE3BAE2A1E0988D900B22364 /* Build configuration list for PBXNativeTarget "PitchPerfectUITests" */;
+			buildPhases = (
+				FE3BAE1F1E0988D900B22364 /* Sources */,
+				FE3BAE201E0988D900B22364 /* Frameworks */,
+				FE3BAE211E0988D900B22364 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE3BAE291E0988D900B22364 /* PBXTargetDependency */,
+			);
+			name = PitchPerfectUITests;
+			productName = PitchPerfectUITests;
+			productReference = FE3BAE231E0988D900B22364 /* PitchPerfectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FE834C181E0172CD00995177 /* PitchPerfect */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE834C2B1E0172CD00995177 /* Build configuration list for PBXNativeTarget "PitchPerfect" */;
@@ -97,13 +147,17 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = tdameritrade;
 				TargetAttributes = {
+					FE3BAE221E0988D900B22364 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FE834C181E0172CD00995177;
+					};
 					FE834C181E0172CD00995177 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
 			buildConfigurationList = FE834C141E0172CD00995177 /* Build configuration list for PBXProject "PitchPerfect" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -116,11 +170,19 @@
 			projectRoot = "";
 			targets = (
 				FE834C181E0172CD00995177 /* PitchPerfect */,
+				FE3BAE221E0988D900B22364 /* PitchPerfectUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FE3BAE211E0988D900B22364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE834C171E0172CD00995177 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,6 +196,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FE3BAE1F1E0988D900B22364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3BAE2D1E09891200B22364 /* BasicOperationTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE834C151E0172CD00995177 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +215,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE3BAE291E0988D900B22364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE834C181E0172CD00995177 /* PitchPerfect */;
+			targetProxy = FE3BAE281E0988D900B22364 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FE834C201E0172CD00995177 /* Main.storyboard */ = {
@@ -166,6 +244,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FE3BAE2B1E0988D900B22364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PitchPerfectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdameritrade.billheitzeg.udacity.PitchPerfectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PitchPerfect;
+			};
+			name = Debug;
+		};
+		FE3BAE2C1E0988D900B22364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PitchPerfectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdameritrade.billheitzeg.udacity.PitchPerfectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PitchPerfect;
+			};
+			name = Release;
+		};
 		FE834C291E0172CD00995177 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -276,6 +376,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FE3BAE2A1E0988D900B22364 /* Build configuration list for PBXNativeTarget "PitchPerfectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3BAE2B1E0988D900B22364 /* Debug */,
+				FE3BAE2C1E0988D900B22364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FE834C141E0172CD00995177 /* Build configuration list for PBXProject "PitchPerfect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
