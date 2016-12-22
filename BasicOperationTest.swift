@@ -14,11 +14,11 @@ class BasicOperationTest: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         XCUIApplication().launch()
-        XCUIDevice.sharedDevice().orientation = .LandscapeLeft
+        XCUIDevice.shared().orientation = .landscapeLeft
     }
     
     override func tearDown() {
-        XCUIDevice.sharedDevice().orientation = .Portrait
+        XCUIDevice.shared().orientation = .portrait
         super.tearDown()
     }
     
@@ -27,8 +27,8 @@ class BasicOperationTest: XCTestCase {
         let startRecordingButton = XCUIApplication().buttons["startRecording"]
         let stopRecordingButton = XCUIApplication().buttons["stopRecording"]
         let exists = NSPredicate(format: "exists == 1")
-        expectationForPredicate(exists, evaluatedWithObject: startRecordingButton, handler: nil)
-        waitForExpectationsWithTimeout(5, handler: nil)
+        expectation(for: exists, evaluatedWith: startRecordingButton, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
         
         //Tap Recording button
         startRecordingButton.tap()
@@ -36,9 +36,9 @@ class BasicOperationTest: XCTestCase {
         //Wait for recording status to change
         let recordingstatusStaticText = XCUIApplication().staticTexts["RecordingStatus"]
         let recording = NSPredicate(format: "label == 'Recording in Progress'")
-        XCUIDevice.sharedDevice().orientation = .Portrait
-        expectationForPredicate(recording, evaluatedWithObject: recordingstatusStaticText, handler: nil)
-        waitForExpectationsWithTimeout(5, handler: nil)
+        XCUIDevice.shared().orientation = .portrait
+        expectation(for: recording, evaluatedWith: recordingstatusStaticText, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
 
 
         //Tap Stop Recording button
@@ -46,8 +46,8 @@ class BasicOperationTest: XCTestCase {
 
         //Wait for recording status to change
         let waitingToRecord = NSPredicate(format: "label == 'Tap to Record'")
-        expectationForPredicate(waitingToRecord, evaluatedWithObject: recordingstatusStaticText, handler: nil)
-        waitForExpectationsWithTimeout(5, handler: nil)
+        expectation(for: waitingToRecord, evaluatedWith: recordingstatusStaticText, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
 }
