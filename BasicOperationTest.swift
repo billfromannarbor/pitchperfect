@@ -22,10 +22,9 @@ class BasicOperationTest: XCTestCase {
         super.tearDown()
     }
     
-    func testRecordAndStopRecord() {
+    func testStartRecord() {
         //Wait for Recording button to be available
         let startRecordingButton = XCUIApplication().buttons["startRecording"]
-        let stopRecordingButton = XCUIApplication().buttons["stopRecording"]
         let exists = NSPredicate(format: "exists == 1")
         expectation(for: exists, evaluatedWith: startRecordingButton, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
@@ -38,15 +37,6 @@ class BasicOperationTest: XCTestCase {
         let recording = NSPredicate(format: "label == 'Recording in Progress'")
         XCUIDevice.shared().orientation = .portrait
         expectation(for: recording, evaluatedWith: recordingstatusStaticText, handler: nil)
-        waitForExpectations(timeout: 5, handler: nil)
-
-
-        //Tap Stop Recording button
-        stopRecordingButton.tap()
-
-        //Wait for recording status to change
-        let waitingToRecord = NSPredicate(format: "label == 'Tap to Record'")
-        expectation(for: waitingToRecord, evaluatedWith: recordingstatusStaticText, handler: nil)
         waitForExpectations(timeout: 5, handler: nil)
     }
     
