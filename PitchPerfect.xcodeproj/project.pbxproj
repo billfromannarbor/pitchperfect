@@ -154,7 +154,6 @@
 					};
 					FE834C181E0172CD00995177 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = S4W9BMG93X;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -365,7 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S4W9BMG93X;
+				DEVELOPMENT_TEAM = TDT9G55W9S;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tdameritrade.billheitzeg.udacity.PitchPerfect;
@@ -378,7 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S4W9BMG93X;
+				DEVELOPMENT_TEAM = TDT9G55W9S;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tdameritrade.billheitzeg.udacity.PitchPerfect;
