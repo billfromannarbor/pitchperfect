@@ -3,7 +3,6 @@
 //  PitchPerfect
 //
 //  Created by Heitzeg, William on 12/20/16.
-//  Copyright © 2016 tdameritrade. All rights reserved.
 //
 
 import UIKit
