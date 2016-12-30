@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JJC-M5-ZUB">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JJC-M5-ZUB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,10 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MPE-z1-L2v">
-                                <rect key="frame" x="134" y="248.5" width="107" height="170.5"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MPE-z1-L2v">
+                                <rect key="frame" x="134" y="224" width="107" height="220.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-Xj-IFZ">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-Xj-IFZ">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="100"/>
                                         <accessibility key="accessibilityConfiguration" hint="Use this to start recording" identifier="startRecording" label="Start Recording"/>
                                         <state key="normal" image="RecordButton"/>
@@ -33,7 +33,7 @@
                                             <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ec6-yt-Fdi"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-Wb-zYl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-Wb-zYl">
                                         <rect key="frame" x="0.0" y="100" width="107" height="20.5"/>
                                         <accessibility key="accessibilityConfiguration" identifier="RecordingStatus"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -41,7 +41,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-K1-HNU">
-                                        <rect key="frame" x="0.0" y="120.5" width="107" height="50"/>
+                                        <rect key="frame" x="0.0" y="120.5" width="107" height="100"/>
                                         <accessibility key="accessibilityConfiguration" hint="Use this to stop recording" identifier="stopRecording" label="Stop Recording"/>
                                         <state key="normal" image="StopButton"/>
                                         <connections>
@@ -49,11 +49,15 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="xcA-K1-HNU" firstAttribute="height" secondItem="hpc-Xj-IFZ" secondAttribute="height" id="UOH-KQ-aRh"/>
+                                    <constraint firstItem="xcA-K1-HNU" firstAttribute="width" secondItem="hpc-Xj-IFZ" secondAttribute="width" id="iiW-6o-i2x"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MPE-z1-L2v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6uV-de-R7S"/>
+                            <constraint firstItem="MPE-z1-L2v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J1W-QT-EHp"/>
                             <constraint firstItem="MPE-z1-L2v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tvd-3z-WC6"/>
                         </constraints>
                     </view>
